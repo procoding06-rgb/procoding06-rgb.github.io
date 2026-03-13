@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>groupe scolaire</title>
+    <style>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      font-family: 'Poppins', sans-serif;
+      background: oldlace;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    nav {
+      background: olive;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+      font-size: 1.2rem;
+    }
+
+    .nav-links a:hover {
+      color: #fca311;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle div {
+      background: white;
+      height: 3px;
+      margin: 5px;
+      width: 25px;
+      border-radius: 5px;
+    }
+
+    header {
+      position: relative;
+      height: 70vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    .carousel {
+      position: absolute;
+      width: 300%;
+      height: 100%;
+      display: flex;
+      animation: slide 15s infinite;
+    }
+
+    .carousel img {
+      width: 100vw;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.6);
+    }
+
+    @keyframes slide {
+      0% {transform: translateX(0);}
+      33% {transform: translateX(-100vw);}
+      66% {transform: translateX(-200vw);}
+      100% {transform: translateX(0);}
+    }
+
+    header h1 {
+      font-size: 3rem;
+      z-index: 1;
+      animation: fadeInDown 2s ease;
+    }
+
+    header p {
+      margin-top: 1rem;
+      font-size: 1.5rem;
+      z-index: 1;
+      animation: fadeInUp 2s ease;
+    }
+
+    @keyframes fadeInDown {
+      from {opacity: 0; transform: translateY(-50px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(50px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    section {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      color: #14213d;
+      margin-bottom: 2rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      opacity: 0;
+      transform: translateY(50px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 1.5rem;
+    }
+
+    .card-body h3 {
+      margin-top: 0;
+      color: #023047;
+      font-size: 1.5rem;
+    }
+
+    .card-body p {
+      font-size: 1rem;
+      color: #333;
+      margin: 1rem 0;
+    }
+
+    .card-body a {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.8rem 1.5rem;
+      background: #fca311;
+      color: white;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .card-body a:hover {
+      background: #fb8500;
+    }
+
+    footer {
+      background: olive;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 4rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #14213d;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 200px;
+        text-align: right;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+    <nav>
+        <div><a href="index.html" style="color: white; font-size: 1.5rem; font-weight: bold;">Groupe Rostan</a></div>
+        <div class="menu-toggle" id="menu-toggle">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="nav-links" id="nav-links">
+          <a href="index.html">Accueil</a>
+          <a href="college.html">Collège</a>
+          <a href="universite.html">Université</a>
+          <a href="grandeecole.html">Grande École</a>
+        </div>
+      </nav>
+      
+      <header>
+        <div class="carousel">
+          <img src="C:\Users\hp\Pictures\for.jpg" alt="Groupe Rostan">
+          <img src="C:\Users\hp\Downloads\islg.jpg" alt="Étudiants">
+          <img src="C:\Users\hp\Pictures\c4.jpg" alt="Campus">
+        </div>
+        <div>
+          <h1>Groupe Scolaire Rostan</h1>
+          <p>Excellence et Innovation au service de l'éducation.</p>
+        </div>
+      </header>
+      
+      <section>
+        <h2>Nos Établissements</h2>
+      
+        <div class="cards">
+          <div class="card" id="card1">
+            <img src="C:\Users\hp\Pictures\pour.jpg" alt="Collège d'Excellence Rostan">
+            <div class="card-body">
+              <h3>Collège d'Excellence Rostan</h3>
+              <p>Un enseignement exceptionnel dès le plus jeune âge pour bâtir l'avenir.</p>
+              <a href="file:///C:/Users/hp/Music/projet%20dev/sit%20of%20ros.html">Découvrir</a>
+            </div>
+          </div>
+      
+          <div class="card" id="card2">
+            <img src="C:\Users\hp\Pictures\c3.jpg" alt="Université Rostan">
+            <div class="card-body">
+              <h3>Université Internationale des Sciences Agricoles et Techniques</h3>
+              <p>Un enseignement supérieur tourné vers les nouvelles technologies et l'agriculture.</p>
+              <a href="file:///C:/Users/hp/Music/projet%20dev/usat.html">Explorer</a>
+            </div>
+          </div>
+      
+          <div class="card" id="card3">
+            <img src="C:\Users\hp\Downloads\is1.jpg" alt="Grande École louis le grand">
+            <div class="card-body">
+              <h3>Grande École louis le grand</h3>
+              <p>Formez-vous à l'excellence et rejoignez les leaders de demain.</p>
+              <a href="file:///C:/Users/hp/Music/projet%20dev/islg.html">En savoir plus</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <footer>
+        &copy; 2025 Groupe Scolaire Rostan. Tous droits réservés.
+      </footer>
+      
+      <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+      
+        menuToggle.addEventListener('click', () => {
+          navLinks.classList.toggle('active');
+        });
+      
+        // Apparition douce des cartes au scroll
+        window.addEventListener('scroll', () => {
+          document.querySelectorAll('.card').forEach(card => {
+            const cardTop = card.getBoundingClientRect().top;
+            if(cardTop < window.innerHeight - 100){
+              card.style.opacity = 1;
+              card.style.transform = 'translateY(0)';
+            }
+          });
+        });
+      </script>
+    
+</body>
+</html>
